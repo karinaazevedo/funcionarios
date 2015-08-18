@@ -9,6 +9,10 @@ class Departamento {
 
 	static hasMany = [historicos:HistoricoFuncional, funcionarios:Funcionario]
 
+	String toString(){
+		this.nome
+	}
+	
     static constraints = {
     	nome (nullable:false, blank:false)
 		sigla (nullable:false, blank:false)

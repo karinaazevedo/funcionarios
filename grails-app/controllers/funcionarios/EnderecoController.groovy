@@ -39,8 +39,8 @@ class EnderecoController {
 
         request.withFormat {
             form multipartForm {
-                flash.message = message(code: 'default.created.message', args: [message(code: 'endereco.label', default: 'Endereco'), enderecoInstance.id])
-                redirect enderecoInstance
+                flash.message = message(code: enderecoInstance.funcionario.id)
+                redirect action:"create", controller:"contato"
             }
             '*' { respond enderecoInstance, [status: CREATED] }
         }

@@ -1,5 +1,13 @@
 <%@ page import="funcionarios.Contato" %>
 
+<div class="fieldcontain ${hasErrors(bean: enderecoInstance, field: 'funcionario', 'error')} required">
+	<label for="funcionario">
+		<g:message code="contato.funcionario.label" default="Funcionario" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="funcionario" required="" value="${flash.message}"/>
+
+</div>
 
 
 <div class="fieldcontain ${hasErrors(bean: contatoInstance, field: 'funcionario', 'error')} required">

@@ -24,6 +24,10 @@ class Funcionario {
 	Integer banco
 	String nomeBanco
 
+	String toString(){
+		this.nome
+	}
+	
 	enum estadoCivil {
 	    Solteiro,
 	    Casado, 
@@ -81,7 +85,7 @@ class Funcionario {
     static constraints = {
     	nome (nullable:false, blank:false)
     	sexo (nullable:false, blank:false)
-		cpf (nullable:false, blank:false)
+		cpf (nullable:false, blank:false, cpf:true)
 		identidade (nullable:false, blank:false)
 		naturalidade (nullable:false, blank:false)
 		dataNascimento (nullable:false, blank:false)
